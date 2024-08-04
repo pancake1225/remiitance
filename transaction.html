@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 375px;
+            height: 750px;
+            background: #fff;
+            border-radius: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 20px;
+            position: relative;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .header h1 {
+            font-size: 18px;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .header .settings {
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .content {
+            margin-top: 20px;
+            overflow-y: auto;
+            height: calc(100% - 130px);
+        }
+
+        .balance-container {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 15px;
+            text-align: center;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .balance-container h2 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .balance-container p {
+            font-size: 16px;
+            color: #888;
+            margin: 5px 0 0;
+        }
+
+        .transactions {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+        }
+
+        .transaction {
+            background: #f9f9f9;
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+
+        .transaction h3 {
+            font-size: 16px;
+            margin: 0 0 5px 0;
+        }
+
+        .transaction p {
+            font-size: 14px;
+            margin: 0;
+            color: #888;
+        }
+
+        .transaction span {
+            font-size: 14px;
+            color: #888;
+        }
+
+        .sort-options {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+
+        .sort-options span {
+            font-size: 14px;
+            color: #888;
+        }
+
+        .sort-options a {
+            font-size: 14px;
+            color: #888;
+            text-decoration: none;
+        }
+
+        .footer {
+            margin-top: 10px;
+            text-align: center;
+            font-family: 'Pacifico', cursive;
+            font-size: 24px;
+            color: #6c63ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="profile">
+                <img src="dora.jpg" alt="Profile Picture">
+                <h1>My Wallet</h1>
+            </div>
+            <a href="setting.html" class="settings">⚙</a>
+        </div>
+        <div class="content">
+            <div class="balance-container">
+                <h2>Balance remaining</h2>
+                <p>$1000.00</p>
+            </div>
+            <div class="sort-options">
+                <span>Short by</span>
+                <a href="main.html">Home</a>
+            </div>
+            <div class="transactions">
+                <div class="transaction">
+                    <h3>Transaction 3:</h3>
+                    <span>Total amount: $90</span>
+                    <p>Hash: 0xa39b59bffec1e4d678512a7d97ea72276
+                    91da9fd0fdd6c8a541141af659fd667</p>
+                </div>
+                <div class="transaction">
+                    <h3>Transaction 2:</h3>
+                    <span>Total amount: $90</span>
+                    <p>Hash: 0x6349f3f179d1da1acba3bb3704ea2f
+                    1cbef153f056643fa39997da721cc</p>
+                </div>
+                <div class="transaction">
+                    <h3>Transaction 1:</h3>
+                    <span>Total amount: $90</span>
+                    <p>Hash: 0xaae8c8c15fea9486b6134ca3f71dd966
+                    40848f2e4a62fa942b53122fca4994</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            YouPay
+        </div>
+    </div>
+</body>
+</html>

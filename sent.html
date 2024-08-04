@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 375px;
+            height: 700px;
+            background: #fff;
+            border-radius: 25px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0;
+            color: #6c63ff;
+        }
+
+        .form-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-container label {
+            font-size: 16px;
+            font-weight: 700;
+            color: #6c63ff;
+        }
+
+        .form-container input {
+            width: calc(100% - 40px);
+            padding: 10px;
+            border-radius: 25px;
+            border: 1px solid #ccc;
+            margin: 0 auto;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .btn {
+            background: #6c63ff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+            margin-top: 20px; 
+        }
+
+        .btn:hover {
+            background: #5750d7;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .popup-content h2 {
+            margin: 0;
+            color: #4CAF50;
+        }
+
+        .footer {
+            margin-top: auto;
+            text-align: center;
+            font-family: 'Pacifico', cursive;
+            font-size: 24px;
+            color: #6c63ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Send</h1>
+        </div>
+        <div class="form-container">
+            <label for="address">Address:</label>
+            <input type="text" id="address">
+            <label for="name">Name:</label>
+            <input type="text" id="name">
+            <label for="amount">Amount:</label>
+            <input type="text" id="amount">
+            <label for="fee">Fee:</label>
+            <input type="text" id="fee">
+            <p>Fees: 1% - 2%</p>
+            <button class="btn" onclick="send()">SEND</button>
+        </div>
+        <div class="footer">
+            YouPay
+        </div>
+    </div>
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h2>Success</h2>
+        </div>
+    </div>
+
+    <script>
+        function send() {
+            document.getElementById('popup').style.display = 'flex';
+            setTimeout(() => {
+                document.getElementById('popup').style.display = 'none';
+                window.location.href = 'main.html';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

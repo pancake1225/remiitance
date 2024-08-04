@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+        }
+
+        .container {
+            background: white;
+            width: 375px;
+            border-radius: 25px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            padding: 20px;
+            position: relative;
+            height: 700px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container::before, .container::after {
+            content: '';
+            position: absolute;
+            background: linear-gradient(to bottom right, #6c63ff, #ab47bc);
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+
+        .container::before {
+            top: -50px;
+            left: -50px;
+        }
+
+        .container::after {
+            bottom: -50px;
+            right: -50px;
+        }
+
+        .small-circle-top-left, .small-circle-bottom-left {
+            content: '';
+            position: absolute;
+            background: linear-gradient(to bottom right, #6c63ff, #ab47bc);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+
+        .small-circle-top-left {
+            top: 10px;
+            left: 10px;
+        }
+
+        .small-circle-bottom-left {
+            bottom: 10px;
+            left: 10px;
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: #6c63ff;
+            text-align: center;
+            font-size: 24px;
+            margin: 30px 0; /* Increased margin */
+        }
+
+        .success-icon {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0; /* Increased margin */
+        }
+
+        .success-icon::before {
+            content: '✔';
+            color: white;
+            font-size: 50px;
+        }
+
+        .btn {
+            background: #6c63ff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: calc(100% - 24px);
+            margin: 30px auto; /* Increased margin */
+            text-align: center; /* Ensure the text is centered */
+            text-decoration: none; /* Remove underline for anchor tag */
+            display: inline-block; /* Ensure it behaves like a button */
+        }
+
+        .btn:hover {
+            background: #5750d7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="small-circle-top-left"></div>
+        <div class="small-circle-bottom-left"></div>
+        <h1>SUCCESS</h1>
+        <div class="success-icon"></div>
+        <a href="login.html" class="btn">Back To Login</a>
+    </div>
+</body>
+</html>

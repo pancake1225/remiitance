@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+        }
+
+        .container {
+            background: white;
+            width: 375px;
+            border-radius: 25px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            padding: 20px;
+            position: relative;
+            height: 700px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container::before, .container::after {
+            content: '';
+            position: absolute;
+            background: linear-gradient(to bottom right, #6c63ff, #ab47bc);
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+
+        .container::before {
+            top: -50px;
+            left: -50px;
+        }
+
+        .container::after {
+            bottom: -50px;
+            right: -50px;
+        }
+
+        .small-circle-top-left, .small-circle-bottom-left {
+            content: '';
+            position: absolute;
+            background: linear-gradient(to bottom right, #6c63ff, #ab47bc);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+
+        .small-circle-top-left {
+            top: 10px;
+            left: 10px;
+        }
+
+        .small-circle-bottom-left {
+            bottom: 10px;
+            left: 10px;
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: #6c63ff;
+            text-align: center;
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        p.subtitle {
+            font-family: 'Pacifico', cursive;
+            font-weight: bold;
+            text-align: center;
+            color: #6c63ff;
+            margin: 0 0 20px;
+        }
+
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+            width: 100%;
+        }
+
+        .input-container input {
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 25px;
+            outline: none;
+            transition: border-color 0.3s;
+            width: calc(100% - 24px);
+            margin: 0 auto;
+        }
+
+        .input-container input:focus {
+            border-color: #6c63ff;
+        }
+
+        .btn {
+            background: #6c63ff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: calc(100% - 24px);
+            margin: 0 auto;
+        }
+
+        .btn:hover {
+            background: #5750d7;
+        }
+
+        .link {
+            text-align: center;
+            color: #6c63ff;
+            text-decoration: none;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .popup-content h2 {
+            margin: 0;
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="small-circle-top-left"></div>
+        <div class="small-circle-bottom-left"></div>
+        <h1>Welcome</h1>
+        <p class="subtitle">YouPay</p>
+        <div class="input-container">
+            <input type="text" id="username" placeholder="Please Enter Username">
+            <input type="password" id="password" placeholder="Please enter Password">
+        </div>
+        <a href="create.html" class="link">Sign up for an account</a>
+        <button class="btn" onclick="showPopup()">LOGIN</button>
+        <a href="forget.html" class="link">Forget password</a>
+    </div>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h2>Login Successful!</h2>
+        </div>
+    </div>
+
+    <script>
+        function showPopup() {
+            console.log('Popup shown');
+            document.getElementById('popup').style.display = 'flex';
+            setTimeout(() => {
+                console.log('Redirecting to main.html');
+                window.location.href = 'main.html';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
